@@ -7,10 +7,244 @@
   <!-- Bootstrap -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
   <!-- Styles -->
-  <link href="css/style.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.min.css">
 </head>
 <body>
-  <h1>Лидер-Казань</h1>
+  <header class="main-header">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container">
+        <a class="navbar-brand" href="/">
+          <img src="img/logo.png" width="174" height="56" alt="Логотип">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Наши услуги <span class="sr-only">текущая</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Почему мы?</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Лицензии и сертификаты</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Калькулятор</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Контакты</a>
+            </li>
+          </ul>
+          <div class="navbar-callback">
+            <span class="phone">+7 (843) 222-55-66</span>
+            <button type="button" class="btn btn-link">Заказть охрану</button>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <main>
+    <div class="promo">
+      <div class="container">
+        <div class="row align-items-center">
+          <h1 class="promo-title col-12 col-md-9">Комплексная охрана Ваших объектов от профессионалов</h1>
+          <p class="promo-desc col-12 col-md-6">100% гарантия сохранности имущества и личной безопасности в любое время</p>
+          <div class="promo-download col-12">
+            <p>Скачайте коммерческое предложение</p>
+            <a href="#" class="btn btn-primary">
+              <svg width="18" height="24" aria-hidden="true" class="align-middle mr-1">
+                <use xlink:href="img/sprite.svg#download-icon"></use>
+              </svg>
+              Скачать предложение
+            </a>
+          </div>
+        </div>
+        <div class="promo-vertical">
+          Успейте снизить бюджет на охрану на 30-35%
+        </div>
+      </div>
+    </div>
+    <section class="services section">
+      <div class="container">
+        <h2 class="section-title">Основные и дополнительные услуги</h2>
+        <div class="row">
+          <div class="section-desc col-md-10 offset-md-1">
+            <p>Оптимизируйте расходы за счёт использования профессиональных ресурсов и экономии времени. Вас ждёт не просто набор стандартных охранных услуг, а эффективные возможности и реальный результат. Профессиональные кадры, специализированная техника и оборудование, внушительный опыт – всё это «Лидер Казань»!</p>
+          </div>
+        </div>
+        <div class="services-list row no-gutters mb-3">
+          <div class="col-md-9">
+            <div class="row no-gutters">
+              <div class="col-md-4">
+                <div class="services-item">
+                  <img class="services-photo" src="img/services/1.jpg" width="272" height="220" alt="Охрана объектов">
+                  <h5 class="services-title">Охрана объектов</h5>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="services-item">
+                  <img class="services-photo" src="img/services/2.jpg" width="272" height="220" alt="Личная охрана">
+                  <h5 class="services-title">Личная охрана</h5>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="services-item">
+                  <img class="services-photo" src="img/services/3.jpg" width="272" height="220" alt="Инкассация">
+                  <h5 class="services-title">Инкассация</h5>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="services-item services-item-bottom">
+                  <img class="services-photo" src="img/services/4.jpg" width="410" height="220" alt="Сопровождение грузов">
+                  <h5 class="services-title">Сопровождение грузов</h5>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="services-item services-item-bottom">
+                  <img class="services-photo" src="img/services/5.jpg" width="410" height="220" alt="Охрана массовых мероприятий">
+                  <h5 class="services-title">Охрана массовых мероприятий</h5>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="services-item services-item-right">
+              <img class="services-photo" src="img/services/6.jpg" width="272" height="444" alt="Консалтинг и антирейдерство">
+              <h5 class="services-title">Консалтинг и антирейдерство</h5>
+            </div>
+          </div>
+        </div><!-- .services-list -->
+        <div class="services-application">
+          <div class="row align-items-center">
+            <div class="col-md-5 offset-md-2">
+              <h3 class="services-application-title">Оставьте заявку на сайте,</h3>
+              <p class="services-application-subtitle">и мы с вами оперативно свяжемся!</p>
+            </div>
+            <div class="col-md-3">
+              <a href="#" class="btn btn-light btn-block">Оставить заявку</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="features section">
+      <div class="container">
+        <h2 class="section-title">Почему стоит работать с нами</h2>
+        <div class="features-list row">
+          <div class="col-md-6 col-lg-4">
+            <div class="features-icon">
+              <svg width="41" height="46" aria-hidden="true">
+                <use xlink:href="img/sprite.svg#features-1"></use>
+              </svg>
+            </div>
+            <h5 class="features-title">Комплексная защита любых объектов</h5>
+            <p class="features-desc">Сайт рыбатекст поможет дизайнеру, верстальщику, вебмастеру сгенерировать</p>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <div class="features-icon">
+              <svg width="48" height="48" aria-hidden="true">
+                <use xlink:href="img/sprite.svg#features-2"></use>
+              </svg>
+            </div>
+            <h5 class="features-title">Гарантированная полная ответственность</h5>
+            <p class="features-desc">Сайт рыбатекст поможет дизайнеру, верстальщику, вебмастеру сгенерировать</p>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <div class="features-icon">
+              <svg width="48" height="43" aria-hidden="true">
+                <use xlink:href="img/sprite.svg#features-3"></use>
+              </svg>
+            </div>
+            <h5 class="features-title">Наличие группы быстрого реагирования</h5>
+            <p class="features-desc">Сайт рыбатекст поможет дизайнеру, верстальщику, вебмастеру сгенерировать</p>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <div class="features-icon">
+              <svg width="48" height="36" aria-hidden="true">
+                <use xlink:href="img/sprite.svg#features-4"></use>
+              </svg>
+            </div>
+            <h5 class="features-title p-0">Абсолютная конфиденциальность информации</h5>
+            <p class="features-desc">Сайт рыбатекст поможет дизайнеру, верстальщику, вебмастеру сгенерировать</p>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <div class="features-icon">
+              <svg width="48" height="48" aria-hidden="true">
+                <use xlink:href="img/sprite.svg#features-5"></use>
+              </svg>
+            </div>
+            <h5 class="features-title">Квалифицированные и опытные сотрудники</h5>
+            <p class="features-desc">Сайт рыбатекст поможет дизайнеру, верстальщику, вебмастеру сгенерировать</p>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <div class="features-icon">
+              <svg width="48" height="48" aria-hidden="true">
+                <use xlink:href="img/sprite.svg#features-6"></use>
+              </svg>
+            </div>
+            <h5 class="features-title">Мощная материально-техническая база</h5>
+            <p class="features-desc">Сайт рыбатекст поможет дизайнеру, верстальщику, вебмастеру сгенерировать</p>
+          </div>
+        </div><!-- .features-list -->
+        <p class="slogan">Экономим ваши деньги, оптимизируя затраты на охрану объектов!</p>
+      </div>
+    </section>
+    <section class="about section">
+      <div class="container about-container">
+        <div class="row justify-content-md-center">
+          <div class="col-md-11">
+            <h2 class="section-title">«Лидер-Казань» — комплексная охрана Ваших объектов от профессионалов</h2>
+            <div class="about-text">
+              <p>Частное охранное предприятие «Лидер-Казань» оказывает весь комплекс охранных услуг на максимально выгодных условиях для заказчиков и с обязательной гарантией. Мы успели накопить внушительный опыт в данной сфере и готовы подобрать эффективные решения для обеспечения абсолютной безопасности любых объектов.</p>
+              <p>Изначально, с 1998 года  наше предприятие существовало под названием ... В 2017 году у нас произошел ребрендинг и мы изменили название на «Лидер Казань», что в большей степени характеризует высший рейтинг нашей организации.</p>
+            </div>
+            <p class="slogan">Всегда выгоднее сотрудничать с теми, кто готов предложить лучшее!</p>
+            </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="info">
+          <div class="info-item row align-items-center">
+            <div class="col-sm-7">
+              <img src="img/info/mission-img.jpg" width="590" height="340" alt="Наша миссия">
+            </div>
+            <div class="col-sm-5">
+              <h4 class="info-title">Наша миссия</h4>
+              <div class="info-text">
+                <p>Оказание охранных услуг на самом высоком уровне и абсолютная конфиденциальность информации. Обратившись к нам, вы всегда можете рассчитывать на индивидуальный подход и положительный результат наших действий.</p>
+              </div>
+            </div>
+          </div>
+          <div class="info-item row align-items-center">
+            <div class="info-photo col-sm-7">
+              <img src="img/info/about-img.jpg" width="590" height="340" alt="Что нужно знать о нас?">
+            </div>
+            <div class="col-sm-5">
+              <h4 class="info-title">Что нужно знать о нас?</h4>
+              <div class="info-text">
+                <p>В своей профессиональной охранной деятельности мы всегда используем профессиональный подход к каждому конкретному заказу. Подтверждением нашего профессионализма являются положительные отзывы клиентов.</p>
+              </div>
+            </div>
+          </div>
+          <div class="info-item row align-items-center">
+            <div class="info-photo col-sm-7">
+              <img src="img/info/team-img.jpg" width="590" height="340" alt="Наша команда">
+            </div>
+            <div class="col-sm-5">
+              <h4 class="info-title">Наша команда</h4>
+              <div class="info-text">
+                <p>Наши сотрудники, в основном, работники правоохранительных органов и ВС России, уволенные в запас, либо лица, прошедшую службу в ВС МО РФ и специальное обучение в учебных центрах по подготовке частных охранников.</p>
+                <p>Руководство предприятием осуществляют опытные сотрудники частных охранных структур и лица, ранее проходившие в качестве начальствующего состава в оперативных службах МВД. </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
 
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>

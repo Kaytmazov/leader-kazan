@@ -34,7 +34,7 @@ gulp.task('copy', function() {
 
 // CSS
 gulp.task('style', function() {
-  gulp.src('sass/**/*.scss')
+  gulp.src('sass/style.scss')
     .pipe(plumber())
     .pipe(sass({outputStyle: 'expanded'}).on('error', sass.logError))
     .pipe(postcss([

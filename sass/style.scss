@@ -1,13 +1,349 @@
-/* ====================== Переменные ====================== */
+/* ====================== Подключение шрифтов ====================== */
+@import 'fonts.scss';
+
+// Переменные
 $primary-color: #3367df;
+$section-bg: #f7f7f7;
 
 /* ====================== Общие стили ====================== */
 body {
-  color: #000;
+  font-family: Muller, sans-serif;
+  color: #333;
 }
 
-h1 {
-  font-size: 3rem;
+h3 {
+  font-size: 1.625rem;
   font-weight: 700;
+}
+
+h4 {
+  font-size: 1.375rem;
+}
+
+h5 {
+  font-size: 1.125rem;
+}
+
+.btn {
+  padding: 1.05rem 2.3rem;
+  font-weight: 500;
+  border-radius: 2px;
+
+  &-primary {
+    background-color: $primary-color;
+    border-color: transparent;
+
+    &:hover,
+    &:focus {
+      background-color: #2957c0;
+    }
+  }
+
+  &-light {
+    background-color: #fff;
+    border-color: transparent;
+
+    &:hover,
+    &:focus {
+      color: #fff;
+      background-color: #2957c0;
+      border-color: transparent;
+    }
+  }
+}
+
+.bg-primary {
+  background-color: #3367df!important;
+}
+
+/* ====================== Header ====================== */
+.navbar {
+  &-light {
+    font-size: 0.875rem;
+    font-weight: 500;
+
+    .navbar-nav {
+      .nav-link {
+        margin-left: 1.3rem;
+        margin-right: 1.3rem;
+        padding: 0.08rem 0;
+        color: #333;
+
+        &.active,
+        &.show,
+        &:focus,
+        &:hover {
+          border-bottom: 2px solid $primary-color;
+        }
+
+        &:focus,
+        &:hover {
+          color: #333;
+        }
+      }
+
+      .active,
+      .show {
+        & > .nav-link {
+          border-bottom: 2px solid $primary-color;
+        }
+      }
+    }
+  }
+
+  &-brand {
+    margin-right: 2rem;
+  }
+
+  &-callback {
+    text-align: right;
+
+    .phone {
+      display: block;
+      font-size: 1.125rem;
+    }
+
+    .btn-link {
+      padding: 0;
+      font-size: 0.875rem;
+      text-decoration: underline;
+      cursor: pointer;
+
+      &:hover,
+      &:focus {
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+/* ====================== Promo ====================== */
+.promo {
+  padding: 7.5rem 0;
+  font-weight: 500;
+  color: #fff;
+  background: #464549 url(../img/promo-bg.jpg) center no-repeat;
+  background-size: cover;
+
+  .container {
+    position: relative;
+  }
+
+  &-title {
+    position: relative;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1.5rem;
+    font-size: 3.375rem;
+    font-weight: 800;
+
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      display: block;
+      width: 7.5rem;
+      height: 2px;
+      background-color: $primary-color;
+    }
+  }
+
+  &-desc {
+    margin-bottom: 3rem;
+    font-size: 1.75rem;
+  }
+
+  &-download {
+    p {
+      margin-bottom: 0.8rem;
+      font-size: 1.25rem;
+    }
+  }
+
+  &-vertical {
+    position: absolute;
+    right: 15px;
+    font-size: 0.875rem;
+    writing-mode: vertical-rl;
+  }
+}
+
+/* ====================== Services ====================== */
+.section {
+  padding: 5rem 0;
+
+  &-title {
+    position: relative;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1.6rem;
+    font-size: 2.25rem;
+    font-weight: 700;
+    text-align: center;
+
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      display: block;
+      width: 6.25rem;
+      height: 2px;
+      background-color: $primary-color;
+    }
+  }
+
+  &-desc {
+    font-size: 1.125rem;
+    text-align: center;
+  }
+}
+
+.services {
+  &-list {
+    margin-top: 1.8rem;
+    margin-left: -2px;
+    margin-right: -2px;
+  }
+
+  &-item {
+    position: relative;
+    margin: 2px;
+    color: #fff;
+    border-radius: 3px;
+    overflow: hidden;
+
+    &:hover {
+      box-shadow: 0 3px 15px rgba(0, 0, 0, 0.6);
+      transition-duration: 0.3s;
+    }
+  }
+
+  &-photo {
+    width: 100%;
+  }
+
+  &-title {
+    position: absolute;
+    left: 1.5rem;
+    bottom: 1.5rem;
+    z-index: 10;
+    margin-bottom: 0;
+  }
+
+  &-application {
+    padding: 2rem 0;
+    color: #fff;
+    background-color: $primary-color;
+    border-radius: 4px;
+  }
+
+  &-application-title {
+    margin-bottom: 0;
+  }
+
+  &-application-subtitle {
+    margin-bottom: 0;
+    font-size: 1.375rem;
+    font-weight: 500;
+  }
+}
+
+/* ====================== Features ====================== */
+.features {
+  padding-bottom: 20rem;
+  background-color: $section-bg;
+
+  &-list {
+    margin-top: 3rem;
+
+    > [class^="col-"] {
+      margin-bottom: 2rem;
+    }
+  }
+
+  &-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 1.5rem;
+    background-color: $primary-color;
+    border-radius: 3px;
+
+    &:hover {
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.6);
+      transition-duration: 0.3s;
+    }
+  }
+
+  &-title {
+    padding-left: 4rem;
+    padding-right: 4rem;
+    text-align: center;
+  }
+
+  &-desc {
+    padding-left: 2rem;
+    padding-right: 2rem;
+    font-size: .9375rem;
+    text-align: center;
+  }
+}
+
+.slogan {
+  margin-bottom: 0;
+  font-size: 1.25rem;
+  font-weight: 500;
+  text-align: center;
   color: $primary-color;
+}
+
+/* ====================== About ====================== */
+.about {
+  margin-top: -20rem;
+
+  &-container {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+    background-color: #fff;
+    box-shadow: 0 40px 70px 10px rgba(33, 37, 42, .04);
+  }
+}
+
+.info {
+  margin-top: 3rem;
+
+  &-item {
+    margin-bottom: 3rem;
+
+    &:nth-child(even) {
+      .info-photo {
+        order: 2;
+        text-align: right;
+      }
+    }
+  }
+
+  &-photo img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  &-title {
+    position: relative;
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      display: block;
+      width: 3rem;
+      height: 2px;
+      background-color: $primary-color;
+    }
+  }
 }
