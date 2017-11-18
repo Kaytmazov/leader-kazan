@@ -4,6 +4,7 @@
 // Переменные
 $primary-color: #3367df;
 $section-bg: #f7f7f7;
+$radius: 3px;
 
 /* ====================== Общие стили ====================== */
 body {
@@ -24,10 +25,14 @@ h5 {
   font-size: 1.125rem;
 }
 
+a {
+  color: $primary-color;
+}
+
 .btn {
-  padding: 1.05rem 2.3rem;
+  padding: 1.063rem 2.3rem;
   font-weight: 500;
-  border-radius: 2px;
+  border-radius: $radius;
 
   &-primary {
     background-color: $primary-color;
@@ -52,14 +57,48 @@ h5 {
   }
 }
 
+.form {
+  &-group {
+    margin-bottom: 5px;
+  }
+
+  &-control {
+    padding: 1.438rem 1.5rem;
+    font-size: .9375rem;
+    color: #333;
+    border-radius: $radius;
+
+    &:focus {
+      background-color: #fff;
+      border-color: #6995fc;
+      box-shadow: 0 0 30px 10px rgba(38, 84, 190, .05);
+    }
+  }
+
+  .btn {
+    padding-top: 1.375rem;
+    padding-bottom: 1.375rem;
+  }
+}
+
 .bg-primary {
   background-color: #3367df!important;
+}
+
+.modal {
+
+  &-body {
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+  }
 }
 
 /* ====================== Header ====================== */
 .navbar {
   &-light {
-    font-size: 0.875rem;
+    font-size: .875rem;
     font-weight: 500;
 
     .navbar-nav {
@@ -71,7 +110,6 @@ h5 {
 
         &.active,
         &.show,
-        &:focus,
         &:hover {
           border-bottom: 2px solid $primary-color;
         }
@@ -190,6 +228,13 @@ h5 {
       height: 2px;
       background-color: $primary-color;
     }
+
+    &.text-left {
+      &::after {
+        left: 0;
+        transform: none;
+      }
+    }
   }
 
   &-desc {
@@ -209,7 +254,7 @@ h5 {
     position: relative;
     margin: 2px;
     color: #fff;
-    border-radius: 3px;
+    border-radius: $radius;
     overflow: hidden;
 
     &:hover {
@@ -269,7 +314,7 @@ h5 {
     height: 80px;
     margin: 0 auto 1.5rem;
     background-color: $primary-color;
-    border-radius: 3px;
+    border-radius: $radius;
 
     &:hover {
       box-shadow: 0 0 15px rgba(0, 0, 0, 0.6);
@@ -344,6 +389,153 @@ h5 {
       width: 3rem;
       height: 2px;
       background-color: $primary-color;
+    }
+  }
+}
+
+/* ====================== Audit ====================== */
+.audit {
+  &-left {
+    padding-left: 0;
+  }
+
+  &-right {
+    padding-right: 6rem;
+  }
+
+  &-text {
+    font-size: 1.125rem;
+  }
+
+  .form {
+
+    &-check {
+
+      &-label {
+        line-height: 1.3;
+        font-size: .875rem;
+
+        a {
+          text-decoration: underline;
+
+          &:hover {
+            text-decoration: none;
+          }
+        }
+      }
+    }
+  }
+}
+
+/* ====================== Certificates ====================== */
+.modal-img {
+  position: relative;
+  display: block;
+  height: 100%;
+  border: .6rem solid #343434;
+  
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+
+  &:hover {
+    &::after {
+      background-color: rgba(51, 103, 223, .7);
+      background-image: url(../img/icons/img-zoom.svg);
+      transition-duration: .3s;
+    }
+  }
+
+  img {
+    max-width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+#imagemodal {
+  text-align: center;
+
+  .modal-dialog {
+    display: inline-block;
+    max-width: 90%;
+  }
+
+  .modal-content {
+    background: none;
+    border: none;
+  }
+
+  .close {
+    text-align: right;
+    color: #fff;
+    opacity: 1;
+    text-shadow: none;
+    cursor: pointer;
+  }
+}
+
+/* ====================== Facts ====================== */
+.facts {
+  
+  &-list {
+    margin-top: 6rem;
+    background-color: $section-bg;
+  }
+
+  &-item {
+    margin-top: -3rem;
+    padding-bottom: 2rem;
+    text-align: center;
+  }
+
+  &-value {
+    font-size: 6.25rem;
+    font-weight: 900;
+    line-height: 1;
+    color: $primary-color;
+  }
+
+  &-title {
+    padding: 0 2rem;
+    font-weight: 400;
+  }
+}
+
+/* ====================== Clients ====================== */
+.clients {
+  
+  ul {
+    padding-left: 20px;
+    font-size: 1.7rem;
+
+    li {
+      color: $primary-color;
+      
+      span {
+        font-size: 1.125rem;
+        color: #333;
+      }
+    }
+  }
+
+  &-list {
+
+    > [class^="col"] {
+      margin-bottom: 2.2rem;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
     }
   }
 }
