@@ -6,6 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <!-- Bootstrap -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+  <!-- Select2 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/css/select2.min.css">
   <!-- Styles -->
   <link rel="stylesheet" href="css/style.min.css">
 </head>
@@ -19,7 +21,6 @@
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
-
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
@@ -40,7 +41,7 @@
           </ul>
           <div class="navbar-callback">
             <span class="phone">+7 (843) 222-55-66</span>
-            <button type="button" class="btn btn-link">Заказть охрану</button>
+            <button type="button" class="btn btn-link" data-toggle="modal" data-target="#modalApplication">Заказть охрану</button>
           </div>
         </div>
       </div>
@@ -55,7 +56,7 @@
           <div class="promo-download col-12">
             <p>Скачайте коммерческое предложение</p>
             <a href="#" class="btn btn-primary">
-              <svg width="18" height="24" aria-hidden="true" class="align-middle mr-1">
+              <svg width="18" height="24" aria-hidden="true" class="align-middle mr-2">
                 <use xlink:href="img/sprite.svg#download-icon"></use>
               </svg>
               Скачать предложение
@@ -124,7 +125,7 @@
               <p class="services-application-subtitle">и мы с вами оперативно свяжемся!</p>
             </div>
             <div class="col-md-3">
-              <a href="#" class="btn btn-light btn-block">Оставить заявку</a>
+              <button type="button" class="btn btn-light btn-block" data-toggle="modal" data-target="#modalApplication">Оставить заявку</button>
             </div>
           </div>
         </div>
@@ -245,12 +246,12 @@
       </div>
     </section>
     <section class="audit">
-      <div class="container-fluid">
-        <div class="row align-items-center">
+      <div class="container">
+        <div class="row">
           <div class="audit-left col-md-6">
             <img src="img/audit-bg.jpg" width="880" height="670" alt="Бесплатный аудит">
           </div>
-          <div class="audit-right col-md-4">
+          <div class="audit-right col-md-6">
             <h2 class="section-title text-left">Бесплатный аудит</h2>
             <div class="audit-text mb-5">
               <p>Оставьте заявку на бесплатную оценку стоимости охраны. Наши специалисты осуществят полное обследование объекта заказчика и выявят все уязвимые места в системе безопасности. Возможно профессиональное консультирование по повышению её уровня.</p>
@@ -266,11 +267,12 @@
                   <input type="tel" class="form-control" id="auditTel" placeholder="Ваш телефон" required>
                 </div>
                 <div class="form-group mt-2 mb-3">
-                  <button type="submit" class="btn btn-primary btn-block">Заказать консультацию</button>
+                  <button type="button" class="btn btn-primary btn-block" data-toggle="modal" data-target="#modalSuccess">Заказать консультацию</button>
                 </div>
                 <div class="form-check">
                   <label class="form-check-label">
-                    <input type="checkbox" class="form-check-input" required>
+                    <input type="checkbox" class="form-check-input" required checked>
+                    <span class="indicator"></span>
                     Я принимаю условия <br>
                     <a href="#">политики конфедициальности</a>
                   </label>
@@ -379,10 +381,204 @@
         </div>
       </div>
     </section>
+    <section class="scheme section">
+      <div class="container">
+        <h2 class="section-title">Как начать сотрудничество</h2>
+        <div class="step-list row">
+          <div class="step-item col-sm-6 col-md-3">
+            <svg width="66" height="70" aria-hidden="true" class="mb-2">
+              <use xlink:href="img/sprite.svg#step-call"></use>
+            </svg>
+            <p class="step-title">Вы звоните или оставляете заявку</p>
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalApplication">Оставить заявку</button>
+          </div>
+          <div class="step-item col-sm-6 col-md-3">
+            <svg width="66" height="70" aria-hidden="true" class="mb-2">
+              <use xlink:href="img/sprite.svg#step-info"></use>
+            </svg>
+            <p class="step-title">Узнаем общую информацию от Вас</p>
+          </div>
+          <div class="step-item col-sm-6 col-md-3">
+            <svg width="66" height="70" aria-hidden="true" class="mb-2">
+              <use xlink:href="img/sprite.svg#step-docs"></use>
+            </svg>
+            <p class="step-title">Составляем смету и подписываем договор</p>
+          </div>
+          <div class="step-item col-sm-6 col-md-3">
+            <svg width="66" height="70" aria-hidden="true" class="mb-2">
+              <use xlink:href="img/sprite.svg#step-security"></use>
+            </svg>
+            <p class="step-title">Приступаем к работе</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="calculate section">
+      <div class="container">
+        <h2 class="section-title">Рассчитайте стоимость охраны</h2>
+        <div class="row mb-4">
+          <div class="section-desc col-md-10 offset-md-1">
+            <p>Повседневная практика показывает, что новая модель организационной деятельности требуют от нас анализа существенных финансовых и административных условий.</p>
+          </div>
+        </div>
+        <form class="form">
+          <div class="row mb-4">
+            <div class="form-group col-md-6">
+              <label for="calcType">Тип охраняемого объекта</label>
+              <select id="calcType" class="select2 form-control">
+                <option></option>
+                <option>Государственный объект</option>
+                <option>Предприятие</option>
+                <option>Частные владения</option>
+                <option>Физическое лицо</option>
+              </select>
+            </div>
+            <div class="form-group col-md-6">
+              <label for="calcQuantity">Количество охранников</label>
+              <input type="range" class="d-block" id="calcQuantity" list="list-numbers" max="160" autocomplete onchange="document.getElementById('rangeValue').innerHTML = this.value;">
+              <datalist id="list-numbers">
+                <option value="0" label="0">
+                <option value="10" label="10">
+                <option value="20" label="20">
+                <option value="40" label="40">
+                <option value="80" label="80">
+                <option value="120" label="120">
+                <option value="160" label="160">
+              </datalist>
+              <span id="rangeValue">10</span>
+            </div>
+          </div>
+          <div class="row">
+            <div class="form-group col-md-4">
+              <label class="sr-only" for="calcTel">Ваш телефон</label>
+              <input type="tel" class="form-control" id="calcTel" placeholder="Ваш телефон" required>
+            </div>
+            <div class="form-group col-md-4">
+              <label class="sr-only" for="calcEmail">Ваш E-mail</label>
+              <input type="text" class="form-control" id="calcEmail" placeholder="Ваш E-mail" required>
+            </div>
+            <div class="form-group col-md-4">
+              <button type="submit" class="btn btn-primary btn-block mb-3">Узнать стоимость охраны</button>
+              <div class="form-check">
+                <label class="form-check-label">
+                  <input type="checkbox" class="form-check-input" required checked>
+                  <span class="indicator"></span>
+                  Я принимаю условия <br>
+                  <a href="#">политики конфедициальности</a>
+                </label>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </section>
+    <section class="contacts">
+      <div class="container">
+        <div class="row">
+          <div class="contacts-left col-md-6">
+            <img src="img/map.jpg" width="960" height="640" alt="Карта">
+          </div>
+          <div class="contacts-right col-md-6">
+            <h2>Контактная информация</h2>
+            <address>
+              <strong>Телефон:</strong><br>
+              +7 (843) 222-55-66<br>
+              +7 (843) 222-55-66
+            </address>
+            <address>
+              <strong>Электронная почта</strong><br>
+              <a href="mailto:info@info.ru">info@info.ru</a>
+            </address>
+            <address>
+              <strong>Адрес офиса:</strong><br>
+              г. Казань, ул. Большая, д. 55
+            </address>
+            <div class="contacts-question">
+              <b class="contacts-question-title">Остались вопросы?</b><br>
+              <span class="contacts-question-subtitle">Задай их менеджеру</span>
+              <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalApplication">
+                <svg width="24" height="24" aria-hidden="true" class="align-middle mr-2">
+                  <use xlink:href="img/sprite.svg#question-icon"></use>
+                </svg>
+                Задать вопрос
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
+  <footer class="main-footer">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-md-3">
+          <img src="img/logo-footer.png" width="174" height="56" alt="Логотип">
+        </div>
+        <div class="copyright col-md-6">
+          © 2017 Лидер-Казань. Все права защищены.
+        </div>
+        <div class="webstudio col-md-3">
+          Создание сайта <a href="http://newformat.ru/">Новый Формат</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+  
+  <!-- Модальное окно "Оставьте заявку" -->
+  <div class="modal fade" id="modalApplication" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-body">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+          <h2 class="modal-title" id="exampleModalLabel">Оставьте заявку</h2>
+          <p class="modal-desc mb-4">Наш менеджер свяжемся с Вами в ближайшее время</p>
+          <form class="form">
+            <div class="form-group">
+              <label class="sr-only" for="auditName">Ваше имя</label>
+              <input type="text" class="form-control" id="auditName" placeholder="Ваше имя" required>
+            </div>
+            <div class="form-group">
+              <label class="sr-only" for="auditTel">Ваш телефон</label>
+              <input type="tel" class="form-control" id="auditTel" placeholder="Ваш телефон" required>
+            </div>
+            <div class="form-group mt-2 mb-3">
+              <button type="submit" class="btn btn-primary btn-block">Оставить заявку</button>
+            </div>
+            <div class="form-check">
+              <label class="form-check-label">
+                <input type="checkbox" class="form-check-input" required checked>
+                <span class="indicator"></span>
+                Я принимаю условия <br>
+                <a href="#">политики конфедициальности</a>
+              </label>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
 
+  <!-- Модальное окно "Спасибо за заявку" -->
+  <div class="modal fade" id="modalSuccess" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-body text-center">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+          <svg width="51" height="38" aria-hidden="true">
+            <use xlink:href="img/sprite.svg#success-icon"></use>
+          </svg>
+          <h2 class="modal-title" id="exampleModalLabel">Спасибо за заявку</h2>
+          <p class="modal-desc">Ваша заявка принята, мы свяжемся с Вамив ближайшее время</p>
+        </div>
+      </div>
+    </div>
+  </div>
 
-  <!-- Creates the bootstrap modal where the image will appear -->
+  <!-- Картинки лиценций в модальном окне -->
   <div class="modal fade" id="imagemodal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
       <div class="modal-content">
@@ -398,6 +594,8 @@
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+  <!-- Select2 -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/js/select2.min.js"></script>
   <!-- Script -->
   <script src="js/script.min.js"></script>
 </body>
