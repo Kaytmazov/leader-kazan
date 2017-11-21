@@ -738,6 +738,68 @@ select.form-control:not([size]):not([multiple]) {
   }
 }
 
+/* ====================== Calculate ====================== */
+.noUi {
+  &-target {
+    background-color: #cbdafc;
+    border: none;
+    box-shadow: none;
+  }
+
+  &-horizontal {
+    height: 6px;
+
+    .noUi-handle {
+      top: -12px;
+      left: -13px;
+      width: 26px;
+      height: 26px;
+    }
+  }
+
+  &-connect {
+    background: $primary-color;
+    box-shadow: none;
+  }
+
+  &-handle {
+    background: #e7ecf2;
+    border: 5px solid #fff;
+    border-radius: 50%;
+    box-shadow: 0 0 30px 10px rgba(38, 84, 190, .14);
+
+    &:focus, &:hover {
+      cursor: pointer;
+      outline: none;
+      box-shadow: 0 0 20px 5px rgba(38, 84, 190, .3);
+    }
+
+    &::before, &::after {
+      display: none;
+    }
+  }
+
+  &-marker {
+    display: none;
+  }
+}
+
+.range-value {
+  font-size: 1.125rem;
+  font-weight: 500;
+  text-align: right;
+
+  .form-control {
+    display: inline-block;
+    width: 50%;
+    margin-right: .8rem;
+    padding: .8rem;
+    font-size: 1.375rem;
+    text-align: center;
+  }
+}
+
+
 /* ====================== Contacts ====================== */
 .contacts {
   position: relative;

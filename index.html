@@ -8,6 +8,8 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
   <!-- Select2 -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/css/select2.min.css">
+  <!-- noUiSlider -->
+  <link rel="stylesheet" href="libs/noUiSlider/nouislider.min.css">
   <!-- Styles -->
   <link rel="stylesheet" href="css/style.min.css">
 </head>
@@ -423,7 +425,7 @@
         </div>
         <form class="form">
           <div class="row mb-4">
-            <div class="form-group col-md-6">
+            <div class="form-group col-md-5">
               <label for="calcType">Тип охраняемого объекта</label>
               <select id="calcType" class="select2 form-control">
                 <option></option>
@@ -433,19 +435,16 @@
                 <option>Физическое лицо</option>
               </select>
             </div>
-            <div class="form-group col-md-6">
+            <div class="form-group col-md-7">
               <label for="calcQuantity">Количество охранников</label>
-              <input type="range" class="d-block" id="calcQuantity" list="list-numbers" max="160" autocomplete onchange="document.getElementById('rangeValue').innerHTML = this.value;">
-              <datalist id="list-numbers">
-                <option value="0" label="0">
-                <option value="10" label="10">
-                <option value="20" label="20">
-                <option value="40" label="40">
-                <option value="80" label="80">
-                <option value="120" label="120">
-                <option value="160" label="160">
-              </datalist>
-              <span id="rangeValue">10</span>
+              <div class="row align-items-center">
+                <div class="col-9">
+                  <div id="rangeQ"></div>
+                </div>
+                <div class="col-3 range-value">
+                  <input id="input-format" class="form-control"> чел.
+                </div>
+              </div>
             </div>
           </div>
           <div class="row">
@@ -455,7 +454,7 @@
             </div>
             <div class="form-group col-md-4">
               <label class="sr-only" for="calcEmail">Ваш E-mail</label>
-              <input type="text" class="form-control" id="calcEmail" placeholder="Ваш E-mail" required>
+              <input type="email" class="form-control" id="calcEmail" placeholder="Ваш E-mail" required>
             </div>
             <div class="form-group col-md-4">
               <button type="submit" class="btn btn-primary btn-block mb-3">Узнать стоимость охраны</button>
@@ -596,6 +595,8 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
   <!-- Select2 -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/js/select2.min.js"></script>
+  <!-- noUiSlider -->
+  <script src="libs/noUiSlider/nouislider.min.js"></script>
   <!-- Script -->
   <script src="js/script.min.js"></script>
 </body>
