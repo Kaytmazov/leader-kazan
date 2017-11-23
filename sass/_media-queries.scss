@@ -1,0 +1,376 @@
+// Large devices (desktops, less than 1200px)
+@media (max-width: 1199px) {
+
+  html {
+    font-size: 14px;
+  }
+
+  .navbar-callback {
+
+    .phone {
+      display: none;
+    }
+
+    .btn-link {
+      font-size: 0;
+    }
+  }
+
+  .services-photo {
+    height: auto;
+  }
+
+  .features-title {
+    padding: 0 3rem;
+  }
+
+  .features-desc {
+    padding: 0;
+  }
+
+}
+
+// Medium devices (tablets, less than 992px)
+@media (max-width: 991px) {
+
+  h2 {
+    font-size: 1.8rem;
+  }
+
+  h3 {
+    font-size: 1.4rem;
+  }
+
+  h4 {
+    font-size: 1.2rem;
+  }
+
+  h5 {
+    font-size: 1rem;
+  }
+
+  .section {
+    padding: 4rem 0;
+
+    &-title {
+      padding-bottom: 1.3rem;
+    }
+
+    &-desc {
+      font-size: 1rem;
+    }
+  }
+
+  .navbar {
+    > .container {
+      position: relative;
+    } 
+
+    &-collapse {
+      position: absolute;
+      right: 0;
+      top: 110%;
+      z-index: 1000;
+      background-color: #fff;
+      box-shadow: 0 25px 30px 0 rgba(0,0,0,.5)
+    }
+
+    .nav-item {
+      margin-bottom: 10px;
+
+      a {
+        display: inline-block;
+        line-height: 1.2;
+      }
+    }
+
+    &-callback {
+      display: none;
+    }
+  }
+
+  .promo {
+    padding: 5rem 0;
+
+    &-title {
+      font-size: 2.8rem;
+    }
+
+    &-desc {
+      font-size: 1.4rem;
+    }
+
+    &-download p {
+      font-size: 1rem;
+    }
+
+    &-vertical::after {
+      bottom: -5.5rem;
+      width: 4px;
+      height: 4rem;
+    }
+  }
+
+  .services-title {
+    left: 1rem;
+    bottom: 1rem;
+  }
+
+  .services-application-subtitle {
+    font-size: 1rem;
+  }
+
+  .info-title {
+    padding-bottom: .5rem;
+  }
+
+  .audit {
+    &-right {
+      padding-top: 2rem;
+      padding-bottom: 2rem;
+    }
+
+    &-text {
+      margin-bottom: 1.5rem;
+      font-size: 1rem;
+    }
+  }
+
+  .facts {
+    &-item {
+      margin-top: -2rem;
+    }
+
+    &-value {
+      font-size: 5rem;
+    }
+
+    &-title {
+      padding: 0;
+    }
+  }
+
+  .clients li span {
+    font-size: 1rem;
+  }
+
+  .step {
+    &-title {
+      padding: 0;
+    }
+
+    &-item:not(:last-child)::after {
+      right: -40px;
+      width: 80px;
+      height: 11px;
+    }
+  }
+
+  .range-value {
+    font-size: 1rem;
+
+    .form-control {
+      margin-right: 0;
+      padding-left: 0;
+      padding-right: 0;
+      font-size: 1rem;
+    }
+  }
+
+  .noUi-value {
+    font-size: 10px;
+  }
+
+}
+
+// Small devices (landscape phones, less than 768px)
+@media (max-width: 767px) {
+
+  .promo {
+    &-title {
+      font-size: 2.4rem;
+    }
+
+    &-desc {
+      font-size: 1.2rem;
+    }
+
+    &-vertical {
+      display: none;
+    }
+  }
+
+  .step-item:not(:last-child)::after {
+    display: none;
+  }
+
+  .services-item-right .services-photo {
+    max-height: 150px;
+    object-fit: cover;
+  }
+
+  .services-application {
+    padding: 1.5rem 1rem;
+  }
+
+  .features-title {
+    padding: 0;
+  }
+
+  .slogan {
+    font-size: 1rem;
+  }
+
+  .info-item {
+    margin-bottom: 2rem;
+
+    .info-photo {
+      margin-bottom: 10px;
+      text-align: center;
+    }
+
+    &:nth-child(even) .info-photo {
+      order: 0;
+      text-align: center;
+    }
+  }
+
+  .audit-left img {
+    position: static;
+    max-width: none;
+    height: auto;
+  }
+
+  .modal-img {
+    margin-bottom: 30px;
+    height: auto;
+  }
+
+  .facts-item {
+    margin-bottom: 2rem;
+  }
+
+  .step-item .btn {
+    margin-bottom: 2rem;
+  }
+
+  .contacts-left {
+    position: relative;
+
+    img {
+      position: static;
+      max-width: none;
+    }
+
+    .map {
+      padding-left: 15px;
+      padding-right: 15px;
+      max-width: none;
+    }
+  }
+
+  .contacts-right {
+    padding-top: 2rem;
+  }
+
+}
+
+// Extra small devices (portrait phones, less than 576px)
+@media (max-width: 575px) {
+
+  h2 {
+    font-size: 1.4rem;
+  }
+
+  .section {
+    padding: 2rem 0;
+  }
+
+  .promo {
+    padding: 3rem 0;
+    text-align: center;
+
+    &-title {
+      font-size: 1.4rem;
+
+      &::after {
+        left: 50%;
+        transform: translateX(-50%);
+      }
+    }
+
+    &-desc {
+      margin-bottom: 2rem;
+      font-size: 1rem;
+    }
+  }
+
+  .services-list {
+    margin-top: 1rem;
+  }
+
+  .services-application {
+    text-align: center;
+
+    &-subtitle {
+      margin-bottom: 1rem;
+    }
+  }
+
+  .modal-img {
+    margin-bottom: 15px;
+  }
+
+  .range-value {
+    text-align: center;
+
+    .form-control {
+      width: 100%;
+    }
+  }
+
+  .contacts {
+    address strong {
+      font-size: 1rem;
+    }
+
+    &-question {
+      &-title {
+        font-size: 1.6rem;
+      }
+
+      &-subtitle {
+        font-size: 1rem;
+      }
+    }
+  }
+
+  .main-footer {
+    text-align: center;
+  }
+
+  .webstudio {
+    margin: 15px 0;
+    text-align: center;
+  }
+
+  .copyright {
+    order: 2;
+  }
+
+  .modal {
+    &-body {
+      padding: 1.5rem 1rem;
+    }
+
+    &-desc {
+      font-size: 1rem;
+    }
+  }
+
+}
+
+
+
+
+

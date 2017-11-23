@@ -150,6 +150,8 @@ select.form-control:not([size]):not([multiple]) {
 
 // Стилизация select
 .select2-container {
+  width: 100%!important;
+
   .select2-selection {
     outline: none;
 
@@ -260,8 +262,9 @@ select.form-control:not([size]):not([multiple]) {
 /* ====================== Header ====================== */
 .navbar {
   &-light {
-    font-size: .875rem;
+    font-size: 14px;
     font-weight: 500;
+    background-color: #fff!important;
 
     .navbar-nav {
       .nav-link {
@@ -269,11 +272,12 @@ select.form-control:not([size]):not([multiple]) {
         margin-right: 1.3rem;
         padding: 0.08rem 0;
         color: #333;
+        border-bottom: 2px solid transparent;
 
         &.active,
         &.show,
         &:hover {
-          border-bottom: 2px solid $primary-color;
+          border-color: $primary-color;
         }
 
         &:focus,
@@ -285,7 +289,7 @@ select.form-control:not([size]):not([multiple]) {
       .active,
       .show {
         & > .nav-link {
-          border-bottom: 2px solid $primary-color;
+          border-color: $primary-color;
         }
       }
     }
@@ -465,8 +469,11 @@ select.form-control:not([size]):not([multiple]) {
 
 /* ====================== Features ====================== */
 .features {
-  padding-bottom: 20rem;
   background-color: $section-bg;
+
+  &.section {
+    padding-bottom: 20rem;
+  }
 
   &-list {
     margin-top: 3rem;
@@ -532,7 +539,7 @@ select.form-control:not([size]):not([multiple]) {
 
     &:nth-child(even) {
       .info-photo {
-        order: 2;
+        order: 1;
         text-align: right;
       }
     }
@@ -559,6 +566,10 @@ select.form-control:not([size]):not([multiple]) {
       background-color: $primary-color;
     }
   }
+
+  &-text p:last-of-type {
+    margin-bottom: 0;
+  }
 }
 
 /* ====================== Audit ====================== */
@@ -572,6 +583,7 @@ select.form-control:not([size]):not([multiple]) {
       position: absolute;
       left: 0;
       top: 0;
+      width: 100%;
       max-width: 47%;
       height: 100%;
       object-fit: cover;
@@ -584,6 +596,7 @@ select.form-control:not([size]):not([multiple]) {
   }
 
   &-text {
+    margin-bottom: 3rem;
     font-size: 1.125rem;
   }
 }
@@ -678,14 +691,14 @@ select.form-control:not([size]):not([multiple]) {
   ul {
     padding-left: 20px;
     font-size: 1.7rem;
+  }
 
-    li {
+  li {
       color: $primary-color;
       
-      span {
-        font-size: 1.125rem;
-        color: #333;
-      }
+    span {
+      font-size: 1.125rem;
+      color: #333;
     }
   }
 
@@ -724,6 +737,8 @@ select.form-control:not([size]):not([multiple]) {
       width: 120px;
       height: 16px;
       background-image: url(../img/arrow.png);
+      background-repeat: no-repeat;
+      background-size: contain;
     }
 
     &:nth-child(even)::after {
@@ -807,12 +822,30 @@ select.form-control:not([size]):not([multiple]) {
   &-left {
     position: static;
 
+    .map,
     img {
       position: absolute;
       left: 0;
       top: 0;
+      width: 100%;
       max-width: 47%;
       height: 100%;
+    }
+
+    .ymaps-2-1-56 {
+      &-ground-pane {
+        filter: grayscale(100%);
+      } 
+
+      &-copyrights-pane {
+        filter: grayscale(100%);
+        &:hover {
+          filter: grayscale(0);
+        }
+      }
+    }
+
+    img {
       object-fit: cover;
     }
   }
@@ -852,6 +885,11 @@ select.form-control:not([size]):not([multiple]) {
   background-color: #1f232e;
 }
 
+.footer-logo img {
+  max-width: 100%;
+  height: auto;
+}
+
 .copyright {
   text-align: center;
 }
@@ -863,3 +901,8 @@ select.form-control:not([size]):not([multiple]) {
     text-decoration: underline;
   }
 }
+
+/*--------------------------------------------------------------
+# Media Queries
+--------------------------------------------------------------*/
+@import "media-queries";
